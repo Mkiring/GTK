@@ -1,0 +1,25 @@
+name: Buuld GTK Environment
+on: [push]
+jobs:
+    Build-GTK:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 安装Meson
+      - run: sudo apt install build-essential pkg-config \
+             cmake meson ninja-build glib-2.0
+
+      - name: 下载所需包
+      - run: wget https://download.gnome.org/sources/gtk/4.6/gtk-4.6.1.tar.xz \
+             https://download.gnome.org/sources/glib/2.71/glib-2.71.3.tar.xz \
+             https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.6.tar.xz \
+             https://download.gnome.org/sources/pango/1.50/pango-1.50.5.tar.xz \
+             https://download.gnome.org/sources/atk/2.36/atk-2.36.0.tar.xz \
+             https://download.gnome.org/sources/libepoxy/1.5/libepoxy-1.5.9.tar.xz \
+             https://download.gnome.org/sources/gobject-introspection/1.71/gobject-introspection-1.71.0.tar.xz \
+             tar -xvJf gtk-4.6.1.tar.xz && rm -rf gtk-4.6.1.tar.xz \
+             tar -xvJf glib-2.71.3.tar.xz && rm -rf glib-2.71.3.tar.xz \
+             tar -xvJf gdk-pixbuf-2.42.6.tar.xz && rm -rf gdk-pixbuf-2.42.6.tar.xz \
+             tar -xvJf pango-1.50.5.tar.xz && rm -rf pango-1.50.5.tar.xz \
+             tar -xvJf atk-2.36.0.tar.xz && rm -rf atk-2.36.0.tar.xz \
+             tar -xvJf libepoxy-1.5.9.tar.xz && rm -rf libepoxy-1.5.9.tar.xz \
+             tar -xvJf gobject-introspection-1.71.0.tar.xz && rm -rf gobject-introspection-1.71.0.tar.xz
