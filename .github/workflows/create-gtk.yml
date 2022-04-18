@@ -1,7 +1,7 @@
 name: Buuld GTK Environment
 on: [push]
 jobs:
-    Build-GTK:
+  Build-GTK:
     runs-on: ubuntu-latest
     steps:
       - name: 安装Meson
