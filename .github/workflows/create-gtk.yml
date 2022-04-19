@@ -1,14 +1,14 @@
 name: Buuld GTK Environment
 on: [push]
 jobs:
-  Build-GTK:
+  build-GTK:
     runs-on: ubuntu-latest
     steps:
-      - name: 安装Meson
+      # - name: 安装Meson
       - run: sudo apt install build-essential pkg-config \
              cmake meson ninja-build glib-2.0
 
-      - name: 下载所需包
+      # - name: 下载所需包
       - run: wget https://download.gnome.org/sources/gtk/4.6/gtk-4.6.1.tar.xz \
              https://download.gnome.org/sources/glib/2.71/glib-2.71.3.tar.xz \
              https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.6.tar.xz \
