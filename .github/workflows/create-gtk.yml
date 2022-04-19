@@ -6,7 +6,7 @@ jobs:
     steps:
       # - name: 安装Meson
       - run: sudo apt install build-essential pkg-config \
-             gcc meson ninja-build 
+              meson ninja-build 
 
       # - name: 下载所需包
       - run: wget https://download.gnome.org/sources/gtk/4.6/gtk-4.6.1.tar.xz \
